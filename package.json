@@ -1,6 +1,6 @@
 {
   "name": "zerda-example-plugin",
-  "version": "0.0.0",
+  "version": "1.0.0-alpha",
   "description": "An example plugin for the Zerda framework",
   "main": "src/index.js",
   "scripts": {
