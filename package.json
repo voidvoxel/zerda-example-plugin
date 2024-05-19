@@ -1,9 +1,13 @@
 {
   "name": "zerda-example-plugin",
-  "version": "1.0.0-alpha",
+  "version": "1.0.0-alpha.1",
   "description": "An example plugin for the Zerda framework",
-  "main": "src/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "build": "npm run build:types && npm run build:compile",
+    "build:compile": "tsc",
+    "build:types": "dts-generator --prefix zerda-example-plugin --project . --out dist/index.d.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -13,7 +17,12 @@
   ],
   "author": "Ashlynne Juniper",
   "license": "MPL-2.0",
-  "dependencies": {
-    "chancellor": "^1.0.3"
+  "devDependencies": {
+    "dts-generator": "^3.0.0",
+    "typescript": "^5.4.5"
+  },
+  "engines": {
+    "node": ">=20.13.1",
+    "zerda": "^0.5.0"
   }
 }
