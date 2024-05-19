@@ -1,4 +1,6 @@
-const run = require("./src/index");
+const {run} = require("../dist/index.js");
+
+console.log(run)
 
 
 let input = [1, 2];
